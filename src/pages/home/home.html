@@ -16,7 +16,7 @@
       <ion-label stacked>Senha</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    <button ion-button block>Entrar</button> <!-- Adicionando botão -->
+    <button ion-button block (click)="login()">Entrar</button> <!-- Adicionando botão, e criando binding para um evento através do   "click" chamando o método login()-->
   </form>
   <button ion-button block outline>Registrar</button> <!-- Adicionando botão -->
 
