@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, MenuController, NavController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,11 +8,18 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public menu: MenuController) {
+  
+  }
 
+  ionViewWillEnter() { // Comando para desabilitar o menu quando a página estiver em menu
+    this.menu.swipeEnable(false);
+  }
+    ionViewDidLeave() { // Comando para habilitar o menu assim que sair da página menu
+    this.menu.swipeEnable(true);
   }
 
   public login() {
-    this.navCtrl.setRoot('CategoriasPage'); // Comando que permite empilhar várias páginas
+    this.navCtrl.setRoot('CategoriasPage'); // Login vai direto para categorias
   }
 }

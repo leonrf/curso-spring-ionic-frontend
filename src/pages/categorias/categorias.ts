@@ -16,10 +16,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CategoriasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CategoriasPage');
   }
-
 }
